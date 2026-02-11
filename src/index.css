@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-neutral-50 text-neutral-900 font-sans;
+  }
+  
+  h1 {
+    @apply text-3xl font-bold tracking-tight;
+  }
+  
+  h2 {
+    @apply text-2xl font-bold tracking-tight;
+  }
+  
+  h3 {
+    @apply text-xl font-bold;
+  }
+  
+  p {
+    @apply text-base leading-relaxed;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-14 px-5 
+    bg-primary-400 text-neutral-900 text-lg font-bold leading-normal tracking-[0.015em] w-full max-w-md mx-auto
+    transition-all hover:bg-primary-500 active:bg-primary-600;
+  }
+
+  .btn-secondary {
+    @apply flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-14 px-5 
+    bg-neutral-100 text-neutral-900 text-lg font-bold leading-normal tracking-[0.015em] w-full max-w-md mx-auto
+    transition-all hover:bg-neutral-200 active:bg-neutral-300;
+  }
+  
+  .input-field {
+    @apply w-full px-4 py-3 rounded-lg bg-white border border-neutral-200 focus:border-primary-400 
+    focus:ring-2 focus:ring-primary-100 focus:outline-none transition duration-200;
+  }
+  
+  .card {
+    @apply bg-white rounded-xl shadow-soft p-4 transition-shadow hover:shadow-medium;
+  }
+
+  .tag {
+    @apply px-4 py-1.5 rounded-2xl text-sm font-medium transition-colors;
+  }
+
+  .tag-primary {
+    @apply tag bg-primary-100 text-primary-700;
+  }
+
+  .tag-neutral {
+    @apply tag bg-neutral-100 text-neutral-600;
+  }
+
+  .tag-small {
+    @apply px-3 py-1 text-xs;
+  }
+}
